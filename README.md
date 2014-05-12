@@ -29,9 +29,9 @@ You can see casper-slidr theme in action at [http://bhira.net](http://bhira.net)
 
 
 #### SCREENSHOTS
-<img width="600" height="584" src="screenshot1.png"/>
+<a href="http://bhira.net"><img width="600" height="584" src="screenshot1.png"/></a>
 
-<img width="600" height="583" src="screenshot2.png"/>
+<a href="http://bhira.net"><img width="600" height="583" src="screenshot2.png"/></a>
 
 
 #### HOW TO BUILD FROM SOURCE?
