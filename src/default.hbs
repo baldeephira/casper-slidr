@@ -1,45 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {{! Document Settings }}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    {{! Page Meta }}
     <title>{{meta_title}}</title>
     <meta name="description" content="{{meta_description}}" />
-
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
-
-    {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="shortcut icon" href="{{asset "img/favicon.png"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/all.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
-
-    {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
+    
+    {{! Set image dimensions for your logo }}
+    <style type="text/css">
+        .blog-logo img {
+            width: 180px; /* 100% of logo width */
+            height: 28px; /* 100% of logo height */
+        }
+        @media only screen and (max-width: 500px) {
+            .blog-logo img {
+                width: 154px; /* 80% of logo width */
+                height: 24px; /* 80% of logo height */
+            }
+        }
+    </style>
 </head>
 <body class="{{body_class}}">
+    <div>
+        {{{body}}}
+        <footer class="site-footer">
+            <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
+            <div class="inner">
+                 <section class="copyright">All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</section>
+                 <section class="poweredby">Proudly published with <a class="icon-ghost" href="https://ghost.org">Ghost</a></section>
+            </div>
+        </footer>
+        {{ghost_foot}}
+    </div>
 
-    {{! Everything else gets inserted here }}
-    {{{body}}}
+    <nav id="my-menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/apps">Apps</a></li>
+            <li><a href="/toolbelt">Toolbelt</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+    <script type="text/javascript" src="{{asset "js/all.min.js"}}"></script>
+    <script>
+        $( document ).ready(function() {
+            $(".prettyprint").parent().css("background-color", "#F7FAFB");
+            $("#my-menu").mmenu({
+                position: "left",
+                zposition: "next"
+            });
+        });
 
-    <footer class="site-footer">
-        <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
-        <div class="inner">
-             <section class="copyright">All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</section>
-             <section class="poweredby">Proudly published with <a class="icon-ghost" href="https://ghost.org">Ghost</a></section>
-        </div>
-    </footer>
-
-    {{! Ghost outputs important scripts and data with this tag }}
-    {{ghost_foot}}
-
-    {{! The main JavaScript file for Casper }}
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-
+        {{! Set your Google Analytics account number instead of UA-XXXXXXX-X }}
+        /* Google Analytics */
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-XXXXXXX-X']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
 </body>
 </html>

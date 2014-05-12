@@ -166,7 +166,7 @@ body {
     height: 100%;
     max-height: 100%;
     font-family: 'Noto Serif', serif;
-    font-size: 2.0rem;
+    font-size: 1.5rem;
     line-height: 1.6em;
     color: #3A4145;
 }
@@ -192,33 +192,33 @@ h4, h5, h6 {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 2.8rem;
     line-height: 1.2em;
     letter-spacing: -2px;
     text-indent: -3px;
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 2.6rem;
     line-height: 1.2em;
     letter-spacing: -1px;
     text-indent: -2px;
 }
 
 h3 {
-    font-size: 3.5rem;
+    font-size: 2.0rem;
 }
 
 h4 {
-    font-size: 3rem;
+    font-size: 2.0rem;
 }
 
 h5 {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
 }
 
 h6 {
-    font-size: 2rem;
+    font-size: 2.0rem;
 }
 
 a {
@@ -237,7 +237,7 @@ h4 a, h5 a, h6 a {
 
 
 p, ul, ol, dl {
-    margin: 1.6em 0;
+    margin: 1.0em 0;
 }
 
 ol ol, ul ul,
@@ -449,38 +449,45 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Big cover image on the home page */
 .site-head {
-    position: relative;
-    display: table;
-    width: 100%;
-    height: 60%;
-    margin-bottom: 5rem;
+    /*position: relative;
+    display: table;*/
+    margin-bottom: 2rem;
     text-align: center;
     color: #fff;
+    width: 100%;
+    /*height: 60%;
     background: #303538 no-repeat center center;
-    background-size: cover;
+    background-size: cover;*/
+    padding: 36px 0;
+    background: #303538; /*#F7FAFB;*/
+    border-bottom: 6px solid #666; /*#E3EDF3;*/
 }
 
 .blog-logo {
+    color: #aaa;
     text-decoration: none;
 }
 
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
 .blog-logo img {
     display: block;
-    max-height: 100px;
-    width: auto;
+    /*BSH*/
+    width: 180px;
+    height: 28px;
+    /*max-height: 100px;
+    width: auto;*/
     margin: 0 auto;
     line-height: 0;
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
-    margin: 10px 0 10px 0;
+    /* margin: 10px 0 10px 0;*/
     font-size: 5rem;
     letter-spacing: -1px;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
-    text-shadow: 0 1px 6px rgba(0,0,0,0.1);
+    /*text-shadow: 0 1px 6px rgba(0,0,0,0.1);*/
 }
 
 .blog-description {
@@ -497,7 +504,7 @@ margin on the iframe, cause it breaks stuff. */
 .post {
     position: relative;
     width:80%;
-    max-width: 700px;
+    max-width: 1024px;
     margin: 4rem auto;
     padding-bottom: 4rem;
     border-bottom: #EBF2F6 1px solid;
@@ -534,8 +541,8 @@ margin on the iframe, cause it breaks stuff. */
 
 .post-excerpt p {
     margin: 1.6rem 0 0 0;
-    font-size: 0.9em;
-    line-height: 1.6em;
+    font-size: 1em;
+    line-height: 1.5em;
 }
 
 .post-meta {
@@ -622,14 +629,42 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Insert some mad padding up in the header for better spacing */
 .post-template .post-header {
-    padding: 60px 0;
+    padding: 36px 0; /*60px 0;*/ 
     text-align: center;
+    /*BSH*/
+    background: #303538; /*#F7FAFB;*/
+    border-bottom: 6px solid #666; /*#E3EDF3;*/
+    margin-bottom: 2rem;
 }
 
-.post-template .blog-title {
+/*BSH*/
+.header-sect {
+    position: relative;
+    width: 80%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/*BSH*/
+.header-sect .mmenu {
+    float: left;
+    width: 32px;
+    height: 32px;
+}
+
+/*BSH*/
+#my-menu {
+    background-color: #575F61;
+}
+#my-menu li, #my-menu li a {
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+/*.post-template .blog-title {
     display: inline-block;
     padding: 2.5rem 0;
-}
+}*/
 
 /* Keep images centred and within the bounds of the post-width */
 .post-content img {
@@ -735,14 +770,14 @@ margin on the iframe, cause it breaks stuff. */
    6. Tag archive
    ========================================================================== */
 
-.archive-template .site-head {
+/*.archive-template .site-head {
     height: auto;
     padding-bottom: 5rem;
 }
 
 .archive-template .site-head a {
     color: #fff;
-}
+}*/
 
 .archive-template .blog-logo {
     display: block;
@@ -775,10 +810,10 @@ margin on the iframe, cause it breaks stuff. */
     box-shadow: #fff 0 0 0 5px;
 }
 
-.archive-template .blog-title {
+/*.archive-template .blog-title {
     display: inline-block;
     padding: 2.5rem 0;
-}
+}*/
 
 /* ==========================================================================
    7. Third Party Elements - Embeds from other services
@@ -975,14 +1010,14 @@ margin on the iframe, cause it breaks stuff. */
         margin-left: 0;
     }
 
-    .site-head {
+    /*.site-head {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         height: auto;
         min-height: 240px;
         padding: 15% 0;
-    }
+    }*/
 
     .blog-title {
         font-size: 4rem;
@@ -1003,25 +1038,25 @@ margin on the iframe, cause it breaks stuff. */
         padding-bottom: 1rem;
     }
 
-    .post-template .post-header {
+    /*.post-template .post-header {
         padding: 40px 0;
-    }
+    }*/
 
     h1 {
-        font-size: 4.8rem;
+        font-size: 2.8rem;
         text-indent: -2px;
     }
 
     h2 {
-        font-size: 3.8rem;
+        font-size: 2.4rem;
     }
 
     h3 {
-        font-size: 3.3rem;
+        font-size: 2.0rem;
     }
 
     h4 {
-        font-size: 2.8rem;
+        font-size: 2.0rem;
     }
 
 }
@@ -1033,8 +1068,17 @@ margin on the iframe, cause it breaks stuff. */
 
 @media only screen and (max-width: 500px) {
 
+    body {
+        font-size: 2.0rem;
+        line-height: 1.4em;
+    }
+
     .blog-logo img {
         max-height: 80px;
+        /*BSH*/
+        padding-top: 4px; /*32 - 24*/
+        width: 154px; /*180 150*/
+        height: 24px; /*28 19*/
     }
 
     .inner,
@@ -1052,9 +1096,9 @@ margin on the iframe, cause it breaks stuff. */
         line-height: 1.6em;
     }
 
-    .site-head {
+    /*.site-head {
         padding: 10% 0;
-    }
+    }*/
 
     .blog-title {
         font-size: 3rem;
@@ -1066,26 +1110,26 @@ margin on the iframe, cause it breaks stuff. */
 
 
     h1, h2 {
-        font-size: 3rem;
+        font-size: 2.4rem;
         line-height: 1.1em;
         letter-spacing: -1px;
     }
 
     h3 {
-        font-size: 2.8rem;
+        font-size: 2.0rem;
     }
 
     h4 {
-        font-size: 2.3rem;
+        font-size: 2.0rem;
     }
 
     .post-template .post {
         padding-bottom: 0;
     }
 
-    .post-template .post-header {
+    /*.post-template .post-header {
         padding: 30px 0;
-    }
+    }*/
 
     .post-content img {
         padding: 0;
@@ -1100,7 +1144,7 @@ margin on the iframe, cause it breaks stuff. */
     }
 
     .post-meta {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .post-footer {
