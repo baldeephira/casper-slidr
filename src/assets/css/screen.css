@@ -654,7 +654,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /*BSH*/
 #my-menu {
-    background-color: #575F61;
+    background-color: #555;
 }
 #my-menu li, #my-menu li a {
     font-size: 1.2em;
